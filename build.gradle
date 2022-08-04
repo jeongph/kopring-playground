@@ -1,6 +1,6 @@
 buildscript {
     ext.buildScriptUrl = "https://raw.githubusercontent.com/bin-e/public-config-resources/main/gradle"
-    apply from: "$buildScriptUrl/variables.gradle"
+    apply from: "${buildScriptUrl}/variables.gradle"
 
     repositories {
         mavenCentral()
@@ -47,8 +47,8 @@ subprojects {
         /**
          * swagger documentation
          */
-        implementation 'io.springfox:springfox-boot-starter:3.0.0'
-        implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+//        implementation 'io.springfox:springfox-boot-starter:3.0.0'
+//        implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 
         /**
          * for JDK 9+ compatibility
