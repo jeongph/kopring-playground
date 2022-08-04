@@ -1,0 +1,11 @@
+project.archivesBaseName = "spring-kotlin-playground-domain"
+version = "0.0.1"
+
+bootJar.enabled = false
+jar.enabled = true
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc'
+    implementation 'io.github.microutils:kotlin-logging:2.1.23'
+}
+

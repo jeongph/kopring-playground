@@ -1,0 +1,98 @@
+buildscript {
+    ext.buildScriptUrl = "https://raw.githubusercontent.com/bin-e/public-config-resources/main/gradle"
+    apply from: "$buildScriptUrl/variables.gradle"
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion"
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'kotlin'
+    apply plugin: 'kotlin-spring'
+    apply plugin: 'kotlin-jpa'
+    apply plugin: 'kotlin-kapt'
+
+    group = 'me.jeonguk'
+    sourceCompatibility = '11'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'javax.validation:validation-api'
+
+        /**
+         * default for kotlin
+         */
+        implementation 'org.jetbrains.kotlin:kotlin-reflect'
+        implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+        implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-reactor'
+        implementation 'io.projectreactor.kotlin:reactor-kotlin-extensions'
+        implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
+
+        /**
+         * swagger documentation
+         */
+        implementation 'io.springfox:springfox-boot-starter:3.0.0'
+        implementation 'io.springfox:springfox-swagger-ui:3.0.0'
+
+        /**
+         * for JDK 9+ compatibility
+         */
+        implementation 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+        implementation 'com.sun.xml.bind:jaxb-impl:2.3.2'
+        implementation 'javax.activation:activation:1.1.1'
+        implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+        }
+    }
+
+    allOpen {
+        annotation 'javax.persistence.Entity'
+        annotation 'javax.persistence.MappedSuperclass'
+        annotation 'javax.persistence.Embeddable'
+    }
+
+    noArg {
+        annotation 'javax.persistence.Entity'
+        annotation 'javax.persistence.MappedSuperclass'
+        annotation 'javax.persistence.Embeddable'
+    }
+
+    compileKotlin {
+        kotlinOptions {
+            freeCompilerArgs = ['-Xjsr305=strict']
+            jvmTarget = '11'
+        }
+    }
+
+    compileTestKotlin {
+        kotlinOptions {
+            freeCompilerArgs = ['-Xjsr305=strict']
+            jvmTarget = '11'
+        }
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+
+}
