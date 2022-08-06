@@ -1,6 +1,13 @@
 buildscript {
-    ext.buildScriptUrl = "https://raw.githubusercontent.com/bin-e/public-config-resources/main/gradle"
-    apply from: "${buildScriptUrl}/variables.gradle"
+//    ext.buildScriptUrl = "https://raw.githubusercontent.com/bin-e/public-config-resources/main/gradle"
+//    apply from: "${buildScriptUrl}/variables.gradle"
+    ext {
+        kotlinVersion = '1.6.21'
+        springBootVersion = '2.7.2'
+        springCloudVersion = '2021.0.3'
+        queryDslVersion = '5.0.0'
+        springfoxVersion = '3.0.0'
+    }
 
     repositories {
         mavenCentral()
@@ -47,7 +54,7 @@ subprojects {
         /**
          * swagger documentation
          */
-//        implementation 'io.springfox:springfox-boot-starter:3.0.0'
+        implementation 'io.springfox:springfox-boot-starter:3.0.0'
 //        implementation 'io.springfox:springfox-swagger-ui:3.0.0'
 
         /**
