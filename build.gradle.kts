@@ -28,6 +28,7 @@ subprojects {
         plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jetbrains.kotlin.plugin.spring")
         plugin("kotlin-noarg")
+        plugin("kotlin-allopen")
     }
 
     group = "me.jeonguk"
