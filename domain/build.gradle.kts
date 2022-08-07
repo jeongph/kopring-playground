@@ -1,5 +1,3 @@
-import org.springframework.boot.gradle.tasks.bundling.BootJar
-
 plugins {
     kotlin("kapt")
     kotlin("plugin.jpa")
@@ -25,10 +23,25 @@ noArg {
     annotation("javax.persistence.Embeddable")
 }
 
-tasks.withType<Jar> {
-    enabled = true
+// FIXME: to -> BasePluginConvention
+//base.archivesBaseName
+version = "1.0.0"
+
+// 이걸 아래처럼 DSL 로 변환 가능
+tasks.withType<Jar> { }
+
+tasks {
+    val projectName = ""
+    jar {
+        enabled = true
+//        archiveBaseName.set(archiveBaseName)
+//        archiveVersion.set("0.0.2")
+    }
+
+    bootJar {
+
+    }
 }
 
-tasks.withType<BootJar> {
-    enabled = false
-}
+// 축약으로 사용 가능
+tasks.bootJar { enabled = false }

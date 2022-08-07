@@ -27,8 +27,9 @@ subprojects {
         plugin("java")
         plugin("org.jetbrains.kotlin.jvm")
         plugin("org.jetbrains.kotlin.plugin.spring")
-        plugin("kotlin-noarg")
-        plugin("kotlin-allopen")
+        // 주석처리해도 돌긴 돈다 -> Q)어딘가 플러그인이 업데이트 되면서 기본으로 들어온건지 확인
+//        plugin("kotlin-noarg")
+//        plugin("kotlin-allopen")
     }
 
     group = "me.jeonguk"
