@@ -1,7 +1,7 @@
-package me.jeonguk.spring.playground.repository
+package me.jeonguk.kopring.playground.repository
 
 import com.querydsl.jpa.impl.JPAQueryFactory
-import me.jeonguk.spring.playground.entity.QSampleEntity.sampleEntity
+import me.jeonguk.kopring.playground.entity.QSampleEntity.sampleEntity
 import org.springframework.stereotype.Repository
 
 @Repository

@@ -1,7 +1,7 @@
-package me.jeonguk.spring.playground.controller
+package me.jeonguk.kopring.playground.controller
 
-import domain.Sample
-import me.jeonguk.spring.playground.service.SampleService
+import me.jeonguk.kopring.playground.domain.Sample
+import me.jeonguk.kopring.playground.service.SampleService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 

@@ -1,4 +1,4 @@
-package me.jeonguk.spring.playground.entity
+package me.jeonguk.kopring.playground.entity
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue

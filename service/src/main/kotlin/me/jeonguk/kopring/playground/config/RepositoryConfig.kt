@@ -1,4 +1,4 @@
-package me.jeonguk.spring.playground.config
+package me.jeonguk.kopring.playground.config
 
 import com.querydsl.jpa.impl.JPAQueryFactory
 import org.springframework.context.annotation.Bean

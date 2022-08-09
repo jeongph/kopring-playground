@@ -1,4 +1,4 @@
-package me.jeonguk.spring.playground.config
+package me.jeonguk.kopring.playground.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

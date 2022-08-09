@@ -1,4 +1,4 @@
-package domain
+package me.jeonguk.kopring.playground.domain
 
 import com.querydsl.core.annotations.QueryProjection
 

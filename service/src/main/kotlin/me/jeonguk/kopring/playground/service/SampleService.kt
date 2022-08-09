@@ -1,9 +1,9 @@
-package me.jeonguk.spring.playground.service
+package me.jeonguk.kopring.playground.service
 
-import domain.Sample
-import me.jeonguk.spring.playground.entity.SampleEntity
-import me.jeonguk.spring.playground.repository.SampleAddonRepository
-import me.jeonguk.spring.playground.repository.SampleRepository
+import me.jeonguk.kopring.playground.domain.Sample
+import me.jeonguk.kopring.playground.entity.SampleEntity
+import me.jeonguk.kopring.playground.repository.SampleAddonRepository
+import me.jeonguk.kopring.playground.repository.SampleRepository
 import org.springframework.stereotype.Service
 
 @Service

@@ -1,4 +1,4 @@
-package me.jeonguk.spring.playground
+package me.jeonguk.kopring.playground
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
