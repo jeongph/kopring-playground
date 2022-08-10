@@ -1,3 +1,3 @@
-rootProject.name = "spring-kotlin-playground"
+rootProject.name = "kopring-playground"
 include("service")
 include("domain")
